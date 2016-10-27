@@ -160,6 +160,18 @@ describe('karmia-database-adapter-cassandra', function () {
                     done(error);
                 });
             });
+
+            it('Call multitime', function (done) {
+                const database = adapter(options),
+                    key = 'user';
+                database.define(key, schema).sync().then(function () {
+                    return database.sync();
+                }).then(function () {
+                    expect(database.tables[key].constructor.name).to.be('KarmiaDatabaseAdapterCassandraTable');
+
+                    done();
+                });
+            });
         });
     });
 
