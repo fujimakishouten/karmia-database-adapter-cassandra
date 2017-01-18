@@ -1,6 +1,6 @@
 {
     "name": "karmia-database-adapter-cassandra",
-    "version": "0.1.6",
+    "version": "0.2.0",
     "description": "Cassandra adapter for Karmia Database",
     "homepage": "https://github.com/fujimakishouten/karmia-database-adapter-cassandra",
     "license": "MIT",
@@ -17,7 +17,8 @@
     },
     "dependencies": {
         "express-cassandra": ">=1.4.1",
-        "jsonschema": ">=1.1.0",
+        "tv4": ">=1.2.7",
+        "tv4-formats": ">=2.2.1",
         "karmia-utility-string": ">=0.5.0"
     },
     "devDependencies": {
